@@ -23,14 +23,18 @@ def data_to_list(data):
     return result
 
 def change_location_to_list_we_need(location):
-    x=[0]
-    y=[0]
+    # change the locations to the x,y coordinate form
+    x=[0]   # origin
+    y=[0]   # origin
     for i in range(2,len(location)):
-        x.append(int(location[i][0]))
+        x.append(int(location[i][0])) 
         y.append(int(location[i][1]))
     return x,y
 
 def getMatrix(x,y):
+    # using the x,y coordinate form of locations that need to be cleaned,
+    # getting the relative number of moves from each locations to other locations
+    # ie. from the point (0,0) to point (1,2), move = 2   ((1,1)+(0,1))
     res = []
     for i in range(len(x)):
         not_rly_res = []
@@ -42,17 +46,20 @@ def getMatrix(x,y):
     return res
 
 def next_move(small_list_before_remove,after_remove,position_cleaned):
-    list2 = after_remove[:]
-    list2.sort()
-    minimum = list2[1]
-    position = small_list_before_remove.index(minimum)
-    while True:
-        if position not in position_cleaned:
+    list2 = after_remove[:]     # make a copy of the list
+    list2.sort()                # sort
+    minimum = list2[1]          # find the non-zero minimum of the list 
+    position = small_list_before_remove.index(minimum) # find the index
+    while True:                 
+    # checking if there are two equal smallest number. ie. [0,2,2,3,4]
+        if position not in position_cleaned:    
             break
         else:
-            list3 = small_list_before_remove[:]
-            list3[position] = -1
-            position = list3.index(minimum)
+            list3 = small_list_before_remove[:] # make a copy
+            list3[position] = -1                
+            # select a number that wouldn't occur in "small_list_before_remove"
+            # and "after_remove"
+            position = list3.index(minimum) # find new position and check again
     return position
 
 def remove(small_list,position_cleaned):

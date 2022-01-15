@@ -14,7 +14,7 @@ it outputs three files: 2a.out, 2b.out, 2c.out, respectively.
 
 The remaining Python scripts run in a similar fashion.
 
-Part 6, as specified in the Competition Handout, is presented as a multimedia file, in this case, a series of Engineering drawings in JPG.
+Part 6, as specified in the Competition Handout, is presented as a multimedia file, in this case, a series of Engineering drawings in a PDF.
 
 ## Citations
 Code and/or inspirations are gathered from the following sources:
