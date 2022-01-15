@@ -1,4 +1,3 @@
-#example.py
+# example.py
 
-
-print("test")
+print("Good luck!")
