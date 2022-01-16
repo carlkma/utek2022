@@ -25,6 +25,9 @@ Code and/or inspirations are gathered from the following sources:
 > https://idea.library.drexel.edu/islandora/object/idea%3A520
 > https://brilliant.org/wiki/dijkstras-short-path-finder/
 
+## Notes
+This repository is made public as of 9:50 p.m. (EST) January 15, 2022 (after the end of Day 1 of the competition).
+
 ## License
 MIT License
 Copyright (c) 2022 [UTEK 2022 Programming Team 2](https://github.com/macarl08)
